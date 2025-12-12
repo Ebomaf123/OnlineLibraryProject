@@ -163,3 +163,5 @@ class TestLibraryManager(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+    # STATUT: V1.0 - La suite de tests unitaires et d'intégration est complète.
+    

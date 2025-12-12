@@ -134,3 +134,5 @@ class LibraryManager:
             self._save_data()
             return True
         return False
+    # STATUT: V1.0 - Les classes de données Media, Book, Film et la logique de gestion sont implémentées.
+    

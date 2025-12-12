@@ -20,7 +20,7 @@ Getting Started (Mac/Python 3)
 
 Clone the repository.
 
-Install dependencies (Flask, Requests; Tkinter is built-in with Python 3).
+Install dependencies (Flask, Requests; Tkinter is built-in with Python 3) with pip3 install Flask requests
 
 Launch the API server with python3 backend_server.py.
 

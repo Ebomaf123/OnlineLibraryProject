@@ -117,3 +117,5 @@ def handle_error(error):
 if __name__ == '__main__':
     # Le debug=True permet le rechargement automatique du serveur lors des changements de code
     app.run(debug=True)
+    # STATUT: V1.0 - Le serveur Flask est configuré et les endpoints CRUD de l'API sont prêts.
+    

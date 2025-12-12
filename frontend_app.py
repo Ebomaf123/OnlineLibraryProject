@@ -330,3 +330,5 @@ if __name__ == '__main__':
     root = tk.Tk()
     app = LibraryApp(root)
     root.mainloop()
+    # STATUT: V1.0 - Le client GUI Tkinter pour l'interaction utilisateur est fonctionnel.
+    

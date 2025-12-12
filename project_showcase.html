@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Programming Project - Online Library Presentation</title>
+    <!-- Load Tailwind CSS for modern and responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Base configuration and Inter font usage */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb; /* Light background */
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        /* General styles for sections */
+        .section-header {
+            border-left: 4px solid #3b82f6; /* Distinctive blue */
+            padding-left: 1rem;
+        }
+
+        /* Style for inline code/technology blocks */
+        kbd {
+            @apply inline-block px-2 py-1 text-sm font-semibold bg-gray-100 text-blue-600 rounded-lg shadow-inner;
+            border: 1px solid #d1d5db;
+        }
+
+        /* Aesthetic improvement for the main button */
+        .btn-primary {
+            background-color: #3b82f6;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+        }
+        .btn-primary:hover {
+            background-color: #2563eb;
+            box-shadow: 0 6px 8px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Style for image containers */
+        .image-container {
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            /* Placeholder styles if the image fails to load */
+            min-height: 300px; 
+            background-color: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: #4b5563;
+        }
+        .image-container:hover {
+            transform: translateY(-5px);
+        }
+        .image-container img {
+             /* Ensures images fill their container */
+            min-height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md p-4 sticky top-0 z-10">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-600">
+                <a href="#">Library Management System (LMS)</a>
+            </h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6 text-gray-600">
+                    <li><a href="#context" class="hover:text-blue-600 transition">Context</a></li>
+                    <li><a href="#architecture" class="hover:text-blue-600 transition">Architecture</a></li>
+                    <li><a href="#frontend" class="hover:text-blue-600 transition">User Interface</a></li>
+                    <li><a href="#testing" class="hover:text-blue-600 transition">Testing & Quality</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Main Title & Summary -->
+        <section class="text-center py-16 bg-blue-50 rounded-xl my-8">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-gray-800">
+                Advanced Programming Project: Online Library
+            </h2>
+            <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+                Implementation of a complete software solution for managing multimedia metadata (books, movies, magazines) via a RESTful API and a dedicated Graphical User Interface (GUI).
+            </p>
+            <a href="#architecture" class="mt-6 inline-block btn-primary rounded-lg px-6 py-3 font-semibold">
+                View Technical Architecture
+            </a>
+        </section>
+
+        <!-- Section 1: Context and Objectives (Task 1) -->
+        <section id="context" class="my-12 py-8">
+            <h3 class="text-3xl font-bold section-header text-gray-800 mb-6">1. Project Context and Objectives (Task 1)</h3>
+            <p class="text-lg text-gray-700 mb-6">
+                The objective is to design a robust system enabling the creation, retrieval, and management of multimedia metadata. This involves applying advanced programming concepts, particularly inter-module communication (<kbd>Frontend</kbd> and <kbd>Backend</kbd>) via <kbd>HTTP</kbd> requests.
+            </p>
+            <div class="grid md:grid-cols-3 gap-6 text-center">
+                <div class="p-6 bg-white rounded-xl shadow-lg border border-gray-100">
+                    <h4 class="text-xl font-semibold text-blue-600 mb-2">Managed Metadata</h4>
+                    <p class="text-gray-500">Name, Publication Date, Author, Category.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-lg border border-gray-100">
+                    <h4 class="text-xl font-semibold text-blue-600 mb-2">Media Categories</h4>
+                    <p class="text-gray-500">Book, Movie, Magazine.</p>
+                </div>
+                <div class="p-6 bg-white rounded-xl shadow-lg border border-gray-100">
+                    <h4 class="text-xl font-semibold text-blue-600 mb-2">Data Persistence</h4>
+                    <p class="text-gray-500">Data permanently stored in a JSON or Pickle file.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Technical Architecture (Task 1 & 2) -->
+        <section id="architecture" class="my-12 py-8 bg-gray-50 rounded-xl p-6">
+            <h3 class="text-3xl font-bold section-header text-gray-800 mb-6">2. Architecture and Communication (Task 2)</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Backend -->
+                <div>
+                    <h4 class="text-2xl font-semibold text-gray-700 mb-4 flex items-center">
+                        Backend: <span class="ml-2 text-red-500 font-mono">Flask (Python)</span>
+                    </h4>
+                    <p class="mb-4 text-gray-600">
+                        The Flask backend manages data storage and persistence (JSON/Pickle), and exposes a RESTful API. It handles all CRUD operations (Create, Read, Update, Delete) required by the system.
+                    </p>
+                    <h5 class="font-bold text-lg mt-4 mb-2">Example API Endpoints:</h5>
+                    <ul class="space-y-2 text-sm text-gray-600 bg-white p-3 rounded-lg border border-gray-200">
+                        <li class="flex justify-between items-center"><span class="font-mono text-green-600">GET</span> <span>/api/media</span> <span class="text-gray-400">List all media items</span></li>
+                        <li class="flex justify-between items-center"><span class="font-mono text-green-600">GET</span> <span>/api/media/category/movie</span> <span class="text-gray-400">Filter by category</span></li>
+                        <li class="flex justify-between items-center"><span class="font-mono text-blue-600">POST</span> <span>/api/media</span> <span class="text-gray-400">Create a new item</span></li>
+                        <li class="flex justify-between items-center"><span class="font-mono text-red-600">DELETE</span> <span>/api/media/{id}</span> <span class="text-gray-400">Delete an item</span></li>
+                    </ul>
+                </div>
+
+                <!-- Frontend -->
+                <div>
+                    <h4 class="text-2xl font-semibold text-gray-700 mb-4 flex items-center">
+                        Frontend: <span class="ml-2 text-blue-500 font-mono">GUI (PyQt/PySide/Tkinter)</span>
+                    </h4>
+                    <p class="mb-4 text-gray-600">
+                        The graphical interface is the client-side application. It initiates HTTP requests to the Flask backend for all data operations and displays the results in an organized interface.
+                    </p>
+                    <h5 class="font-bold text-lg mt-4 mb-2">Interface Features:</h5>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>Display of the complete list and filtered views.</li>
+                        <li>Search field by exact name.</li>
+                        <li>Detailed view of metadata by clicking an item.</li>
+                        <li>Form for creating new media records.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: User Interface (GUI) Overview -->
+        <section id="frontend" class="my-12 py-8">
+            <h3 class="text-3xl font-bold section-header text-gray-800 mb-6">3. User Interface (GUI) Overview</h3>
+
+            <!-- IMAGE EXAMPLE 1: Main View and Filters (Main View) -->
+            <div class="grid md:grid-cols-2 gap-8 items-center mb-10">
+                <div class="image-container">
+                    <!-- EXPECTED PATH: Images1/MainViewandFilters.png -->
+                    <img src="Images1/MainViewandFilters.png" 
+                         alt="Screenshot of the graphical interface showing the main list of available media with filter options." 
+                         class="w-full h-auto object-cover" 
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x500/800000/FFFFFF?text=!!!+ERROR+Image+1+!!!+CHECK+PATH+Images1/MainViewandFilters.png';"
+                    />
+                </div>
+                <div>
+                    <h4 class="text-2xl font-semibold text-gray-700 mb-3">Main View and Filtering</h4>
+                    <p class="text-gray-600">
+                        The main screen presents a searchable and filterable list. Users can easily browse media and apply filters by category (<kbd>Book</kbd>, <kbd>Movie</kbd>, <kbd>Magazine</kbd>) or via a text search.
+                    </p>
+                    <ul class="mt-4 list-disc list-inside text-gray-600 space-y-1">
+                        <li>Display of API results in a clear list.</li>
+                        <li>Management of user interactivity (click, search, filter).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-10 border-gray-200" />
+
+            <!-- IMAGE EXAMPLE 2: Media Creation and Detail View (Creation and Details) -->
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="order-2 md:order-1">
+                    <h4 class="text-2xl font-semibold text-gray-700 mb-3">Media Creation and Detail View</h4>
+                    <p class="text-gray-600">
+                        This view presents the form for creating a new item. The form handles data validation (e.g., date format) before sending the metadata to the backend via a <kbd>POST</kbd> or <kbd>PUT</kbd> (update) request.
+                    </p>
+                    <ul class="mt-4 list-disc list-inside text-gray-600 space-y-1">
+                        <li>Input validation to ensure data integrity (e.g., date format).</li>
+                        <li>Clear separation between presentation logic (GUI) and business logic (API).</li>
+                    </ul>
+                </div>
+                <div class="image-container order-1 md:order-2">
+                    <!-- EXPECTED PATH: Images1/MediaCreationandDetailView.png -->
+                    <img src="Images1/MediaCreationandDetailView.png" 
+                         alt="Screenshot of the graphical interface showing the media creation form." 
+                         class="w-full h-auto object-cover"
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x500/800000/FFFFFF?text=!!!+ERROR+Image+2+!!!+CHECK+PATH+Images1/MediaCreationandDetailView.png';"
+                    />
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 4: Testing, Error Handling, and Best Practices (Tasks 3 & 4) -->
+        <section id="testing" class="my-12 py-8 bg-indigo-50 rounded-xl p-6 border-l-4 border-indigo-500">
+            <h3 class="text-3xl font-bold text-gray-800 mb-4">4. Testing, Error Handling, and Best Practices (Tasks 3 & 4)</h3>
+            
+            <p class="text-gray-700 mb-4">
+                Quality assurance is a pillar of the project. The solution integrates unit and integration tests, as well as exception handling mechanisms to ensure its robustness and maintainability.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Testing (Task 3) -->
+                <div>
+                    <h4 class="font-semibold text-xl text-indigo-600 mb-2">Unit and Integration Tests (Task 3)</h4>
+                    <p class="text-gray-600 mb-2">
+                        At least three tests are implemented to verify core functionality, covering both backend and frontend:
+                    </p>
+                    <ul class="list-disc list-inside text-sm text-gray-600 space-y-1 bg-white p-3 rounded-lg border">
+                        <li><kbd>Backend Test:</kbd> Verification of the <span class="font-mono">POST /api/media</span> endpoint for correct data serialization and persistence.</li>
+                        <li><kbd>Frontend Test:</kbd> Simulation of a user search to ensure the correct result is displayed based on the API response.</li>
+                        <li><kbd>Error Test:</kbd> Verification of handling invalid input (e.g., attempting to create without a required field).</li>
+                    </ul>
+                </div>
+
+                <!-- Error Handling & Discussion (Task 4) -->
+                <div>
+                    <h4 class="font-semibold text-xl text-indigo-600 mb-2">Exception Handling (Task 4)</h4>
+                    <p class="text-gray-600 mb-2">
+                        Exception handling and best practices are applied at all levels:
+                    </p>
+                    <ul class="list-disc list-inside text-sm text-gray-600 space-y-1 bg-white p-3 rounded-lg border">
+                        <li><kbd>API Layer:</kbd> Handling <kbd>404</kbd> (not found) codes for element searches and <kbd>400</kbd> (bad request) for invalid JSON data.</li>
+                        <li><kbd>GUI Layer:</kbd> Displaying clear error messages to the user (via a modal box) instead of crashing, especially for network connection errors.</li>
+                        <li><kbd>Code Quality:</kbd> Use of meaningful names, clear modular structure, and detailed comments, as requested in the assignment.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="max-w-6xl mx-auto py-8 px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Advanced Programming Project. Architecture: Flask, Python, GUI.</p>
+            <p class="mt-2 text-xs text-gray-400">This file (`project_showcase.html`) is the presentation page for the oral defense.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

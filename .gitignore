@@ -1,0 +1,20 @@
+Fichiers et dossiers à ignorer dans un projet Python (MacOS/Python 3)
+
+--- Build et Cache Python (Ceci cause des problèmes de "pycache") ---
+
+pycache/
+*.pyc
+*.pyo
+*.pyd
+
+--- Environnements Virtuels ---
+
+Dégage l'environnement virtuel que Python utilise
+
+venv/
+env/
+
+--- Spécifiques au Système d'Exploitation (Mac) ---
+
+.DS_Store
+._*

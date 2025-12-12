@@ -1,0 +1,57 @@
+{
+    "1": {
+        "name": "Le Seigneur des Anneaux: La Communaut\u00e9 de l'Anneau",
+        "author": "J.R.R. Tolkien",
+        "publication_date": "1954-07-29",
+        "category": "Book"
+    },
+    "2": {
+        "name": "Dune",
+        "author": "Frank Herbert",
+        "publication_date": "1965-08-01",
+        "category": "Book"
+    },
+    "3": {
+        "name": "Le Guide du Voyageur Galactique",
+        "author": "Douglas Adams",
+        "publication_date": "1979-10-12",
+        "category": "Book"
+    },
+    "4": {
+        "name": "Blade Runner 2049",
+        "author": "Denis Villeneuve",
+        "publication_date": "2017-10-04",
+        "category": "Film"
+    },
+    "5": {
+        "name": "Inception",
+        "author": "Christopher Nolan",
+        "publication_date": "2010-07-21",
+        "category": "Film"
+    },
+    "6": {
+        "name": "Interstellar",
+        "author": "Christopher Nolan",
+        "publication_date": "2014-11-05",
+        "category": "Film"
+    },
+    "7": {
+        "name": "Science & Vie",
+        "author": "Groupe Excelsior",
+        "publication_date": "2024-03-01",
+        "category": "Magazine"
+    },
+    "8": {
+        "name": "National Geographic (Mars)",
+        "author": "National Geographic Society",
+        "publication_date": "2024-03-15",
+        "category": "Magazine"
+    },
+    "9": {
+        "name": "SHARIF",
+        "author": "NIKIEMA",
+        "publication_date": "2025-12-7",
+        "category": "Film",
+        "creation_date": "2025-12-12 19:55:13"
+    }
+}
